@@ -1,7 +1,7 @@
 function updateRemoveFromCartEventListener() {
   for (let i = 0; i < document.querySelectorAll('.delete').length; i++) {
     document.querySelectorAll('.delete')[i].addEventListener('click', function () {
-      fetch(`https://frontend-eight-teal.vercel.app/cart/${this.id}`, { method: 'DELETE' })
+      fetch(`https://site--deploy--mpgp4zbg9kqf.code.run/cart/${this.id}`, { method: 'DELETE' })
         .then(response => response.json())
         .then(data => {
           if (data.result) {
@@ -25,7 +25,7 @@ function updateRemoveFromCartEventListener() {
 }
 
 // Get cart
-fetch('http://localhost:3000/cart')
+fetch('http://site--deploy--mpgp4zbg9kqf.code.run/cart')
   .then(response => response.json())
   .then(data => {
     if (data.result) {
@@ -53,7 +53,7 @@ fetch('http://localhost:3000/cart')
 
 // Purchase
 document.querySelector('#purchase').addEventListener('click', function () {
-  fetch('http://localhost:3000/bookings', { method: 'PUT' })
+  fetch('http://site--deploy--mpgp4zbg9kqf.code.run/bookings', { method: 'PUT' })
     .then(response => response.json())
     .then(data => {
       data.result && window.location.assign('bookings.html');
