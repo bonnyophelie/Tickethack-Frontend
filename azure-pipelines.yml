@@ -3,15 +3,12 @@ trigger:
  
 pool:
   name: Azure Pool 
-
-variables:
- - vercelProjectId: $(VERCEL_PROJECT_ID)
- - vercelOrgId: $(VERCEL_ORG_ID)
- - vercelToken: $(VERCEL_API_TOKEN)
- - production: true
  
 jobs:
-  - job: vercel
-    steps:
-    - script: | 
-    
+  - job: vercel-deployment
+    inputs:
+      vercelProjectId: $(VERCEL_PROJECT_ID)
+      vercelOrgId: $(VERCEL_ORG_ID)
+      vercelToken: $(VERCEL_API_TOKEN)
+      production: true
+    displayName: 'Deploy Vercel'
