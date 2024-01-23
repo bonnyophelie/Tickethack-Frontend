@@ -1,7 +1,7 @@
 function updateRemoveFromCartEventListener() {
   for (let i = 0; i < document.querySelectorAll('.delete').length; i++) {
     document.querySelectorAll('.delete')[i].addEventListener('click', function () {
-      fetch(`http://localhost:3000/cart/${this.id}`, { method: 'DELETE' })
+      fetch(`https://frontend-eight-teal.vercel.app/cart/${this.id}`, { method: 'DELETE' })
         .then(response => response.json())
         .then(data => {
           if (data.result) {
