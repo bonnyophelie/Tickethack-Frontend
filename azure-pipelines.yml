@@ -1,0 +1,14 @@
+trigger:
+- main
+ 
+pool:
+  name: Azure Pool 
+ 
+jobs:
+  - job: vercel
+    steps:
+    - script: | 
+    vercelProjectId: $(VERCEL_PROJECT_ID)
+    vercelOrgId: $(VERCEL_ORG_ID)
+    vercelToken: $(VERCEL_API_TOKEN)
+    production: true
