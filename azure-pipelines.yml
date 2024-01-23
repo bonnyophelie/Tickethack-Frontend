@@ -5,7 +5,7 @@ pool:
   name: Azure Pool 
  
 steps:
-  - task: vercel-deployment
+  - task: vercel-deployment-task@1
     inputs:
       vercelProjectId: $(VERCEL_PROJECT_ID)
       vercelOrgId: $(VERCEL_ORG_ID)
