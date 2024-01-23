@@ -7,7 +7,7 @@ pool:
 steps:
   - task: vercel-deployment-task@1
     inputs:
-      vercelProjectId: 'tickethack_frontend'
+      vercelProjectId: "prj_U2UGGVyxnv23rvllRJ8197UxJPXM"
       vercelOrgId: $(VERCEL_ORG_ID)
       vercelToken: $(VERCEL_TOKEN)
       production: true
