@@ -25,7 +25,7 @@ function updateRemoveFromCartEventListener() {
 }
 
 // Get cart
-fetch('http://site--deploy--mpgp4zbg9kqf.code.run/cart')
+fetch('https://site--deploy--mpgp4zbg9kqf.code.run/cart')
   .then(response => response.json())
   .then(data => {
     if (data.result) {
