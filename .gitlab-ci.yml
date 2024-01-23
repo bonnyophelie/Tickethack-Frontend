@@ -6,7 +6,7 @@ deploy_production:
     - main
   script:
     - npm install --global vercel
-    - vercel login -u $(VERCEL_ORG_ID) -p $(VERCEL_API_TOKEN)
-    - vercel pull --yes --environment=production --token=$VERCEL_TOKEN
+    - vercel login -u $VERCEL_ORG_ID -p $VERCEL_API_TOKEN
+    - vercel pull --yes --environment=production --token=$VERCEL_API_TOKEN
     - vercel build --prod --token=$VERCEL_TOKEN
     - vercel deploy --prebuilt --prod --token=$VERCEL_API_TOKEN
