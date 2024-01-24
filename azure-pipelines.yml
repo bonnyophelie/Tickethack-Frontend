@@ -1,0 +1,12 @@
+trigger:
+  - main
+ 
+pool:
+  name: Azure Pool 
+ 
+steps:
+  - task: vercel-deployment-task@1
+    inputs:
+      vercelToken: $(VERCEL_TOKEN)
+      production: true
+    displayName: 'Deploy Vercel'
